@@ -1,5 +1,6 @@
 package com.example.usingstrigs;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -10,12 +11,15 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtView2;
 
+    //private static final String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Log.i("Lifecycle", "OnCreate() invoked");
+        //Log.i(TAG, "onCreate: ");
 
         txtView2 = findViewById(R.id.textView2);
         txtView2.setText(R.string.Msg2);
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         Log.i("Lifecycle", "onStart() invoked");
+        //Log.i(TAG, "onStart: ");
     }
 
     @Override
@@ -38,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Log.i("Lifecycle", "onResume() invoked");
     }
+
+    /*@Override
+    protected void onPostResume() {
+        super.onPostResume();
+    }*/
 
     @Override
     protected void onPause(){
